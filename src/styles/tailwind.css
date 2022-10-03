@@ -1,0 +1,172 @@
+ @tailwind base;
+ @tailwind components;
+ @tailwind utilities;
+ @tailwind screens;
+
+ /* Variables */
+    :root {
+        --app-container: #f3f6fd;
+        --main-color: #0C0F14;
+        --secondary-color: #1f1c2e;
+
+        --link-color: #1f1c2e;
+        --link-color-hover: rgba(0, 0, 0, 0.1);
+        --link-color-active: #fff;
+        --link-color-active-bg: #1f1c2e;
+
+        --color1: '#6348B3';
+        --color2: '#DA37A7';
+        --color3: '#EF5F87';
+        --color4: '#7380F3';
+        --color5: '#F35810';
+        --color6: '#00AB5F';
+        --color7: '#FDD039';
+        --gradient1rgb: 'rgb(115,128,243)';
+        --gradient1: 'linear-gradient(90deg, rgba(115,128,243,1) 0%, rgba(240,95,135,1) 100%);';
+    }
+
+    .dark:root {
+        --app-container: #0C0F14;
+        --main-color: #fff;
+        --secondary-color: #1f1c2e;
+        /* --secondary-color: rgba(255,255,255,.8); */
+
+        --projects-section: #1f2937;
+        --link-color: rgba(255,255,255,.8);
+        --link-color-hover: rgba(195, 207, 244, 0.1);
+        --link-color-active-bg: rgba(195, 207, 244, 0.2);
+
+        --color1: '#6348B3';
+        --color2: '#DA37A7';
+        --color3: '#EF5F87';
+        --color4: '#7380F3';
+        --color5: '#F35810';
+        --color6: '#00AB5F';
+        --color7: '#FDD039';
+        --gradient1rgb: 'rgb(115,128,243)';
+        --gradient1: 'linear-gradient(90deg, rgba(115,128,243,1) 0%, rgba(240,95,135,1) 100%);';
+    }
+
+
+/* Ant Design - Redesign */
+    /* Group Input */
+        .ant-form-item{
+            margin-bottom: 16px
+        }
+
+        /* Label */
+            .ant-form-item-label{
+                padding-bottom: 2px !important;
+            }
+
+        /* Input */
+            input{
+                border-radius: 10px !important;
+                height: 44px;
+                box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.02);
+                background: #fff;
+            }
+             .ant-input-affix-wrapper{
+                border-radius: 10px !important;
+                box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.02);
+                background: #fff;
+            }
+            .ant-input-affix-wrapper input{
+                height: 34px !important;
+                box-shadow: none !important;
+            }
+            .ant-input{
+                margin-left: 4px;
+            }
+
+        /* Select */
+            .ant-select-selector{
+                border-radius: 10px !important;
+                height: 44px !important;
+            }
+            .ant-select-selector input{
+                height: 44px !important;
+            }
+            .ant-select-selection-placeholder{
+                padding-top: 7px !important;
+            }
+            .ant-select-selection-item{
+                display: flex;
+                align-items: center;
+            }
+
+    /* Error Input */
+        .ant-form-item-explain{
+            margin-top: 4px;
+            margin-left: 16px;
+        }
+
+    /* CheckBox */
+        .ant-checkbox-inner{
+            border-radius: 10px
+        }
+        .ant-checkbox:hover::after, .ant-checkbox-wrapper:hover .ant-checkbox::after{
+            border: none;
+        }
+
+    /* PopOver */
+        .ant-popover-inner{
+            background: #fff;
+            border-radius: 10px;
+        }
+        .ant-popover-inner-content{
+            padding: 0px;
+        }
+        .ant-popover-title{
+            padding: 12px 12px 9px
+        }
+
+        /* CellPhone */
+        .cellphone .ant-input-group-addon{
+            border-radius: 10px;
+        }
+
+    /* Confirm Field Icon */
+        .ant-form-item-children-icon{
+            margin-top: -14px !important;
+        }
+
+
+/* Message pop Antd */
+    .ant-message-notice-content{
+        border-radius: 10px;
+    }
+
+    .anticon {
+        top: -2px !important;
+    }
+
+/* Modal */
+    .ant-modal-content{
+        border-radius: 20px;
+    }
+
+    .ant-modal-header{
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }
+    .ant-modal-close{
+        top: -4px;
+    }
+
+/* Btn */
+    .ant-btn{
+        border-radius: 10px;
+    }
+
+/* Upload */
+.ant-upload.ant-upload-select-picture-card{
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.ant-upload.ant-upload-select-picture-card img{
+    width: auto !important;
+    max-width: none;
+    height: 100%;
+}

@@ -1,0 +1,34 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve"
+  },
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "__testAssets__/genData.js"],
+  "exclude": [
+      // archives
+      "firebaseAuth.ts",
+      //   folders
+      "node_modules",
+      "functions",
+
+      // tests
+      "__testAssets__",
+      "__e2e__",
+      "e2e",
+      "**.*.e2e.js",
+      "**/__tests__",
+      "**/*.spec.ts",
+      "**/*.test.ts"
+    ]
+}

@@ -1,0 +1,60 @@
+{
+    "git.enabled": false,
+    "files.exclude": {
+        // Log
+        "yarn-error.log": true,
+        "ui-debug.log": true,
+        "firebase-debug.log": true,
+        "firestore-debug.log": true,
+
+        // Config
+        "package.json": true,
+        ".vscode": true,
+        ".gitignore": true,
+        "README.md": true,
+        "yarn.lock": true,
+        ".editorconfig": true,
+        ".babelrc": true,
+        "postcss.config.js": true,
+        "tailwind.config.js": true,
+
+        // Next
+        ".next": true,
+        "out": true,
+        "next.config.js": true,
+        "next-env.d.ts": true,
+        "public": true,
+        "tsconfig.json": true,
+
+        // Linter
+        ".eslintrc": true,
+        ".eslintrc.json": true,
+        ".eslintignore": true,
+
+        // Tests
+        "jest.config.ts": true,
+        "nightwatch.conf.js": true,
+        "tests_output": true,
+        "chromedriver.log": true,
+        "__testAssets__": true,
+        "__e2e__": true,
+
+        // Firebase
+        "emulators": true,
+        "firebasePublic": true,
+        "firebase.ts": true,
+        ".firebaserc": true,
+        "firebase.json": true,
+        "firestore.indexes.json": true,
+        "firestore.rules": true,
+        "storage.rules": true,
+        ".firebase": true,
+        "firebaseAuth.ts": true
+    },
+    "emmet.includeLanguages": {
+        "javascript": "javascriptreact"
+    },
+    "emmet.excludeLanguages": [
+      "markdown"
+    ]
+  }
