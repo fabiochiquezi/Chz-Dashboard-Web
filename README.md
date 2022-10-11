@@ -1,13 +1,15 @@
 # Dashboard Next + Firebase + Ant design
+
+General Dashboard in process of construction
 &nbsp;
 
-## Todo
-1. Create a project firebase
-2. add the variables firebase in project
+## Preview
 
+www.dashboard.chiquezi.com
 &nbsp;
 
-## Structure
-1. app (back-end)
-2. functions (lambda)
-3. src (front-end)
+## Install
+
+1. clone repo
+2. install project (yarn install)
+3. run project: (yarn dev)

@@ -4,9 +4,10 @@ import { Form, Input, Button } from 'antd'
 import React, { useRef, useState } from 'react'
 import { formRules } from '../../../../shared/config/formRules'
 import { fnRegister } from '../../../fns/Login/fnRegister'
-import LoadingSpin from '../../../components/Icons/LoadingSpin'
+
 import { routes } from '../../../../shared/config/routes'
-import BackButton from '../../../components/Buttons/BackButton'
+import BackButton from '../../../Components/Buttons/BackButton'
+import LoadingSpin from '../../../Components/Icons/LoadingSpin'
 
 const FormRegister: React.FC = () => {
     const [form] = Form.useForm()
@@ -24,21 +25,34 @@ const FormRegister: React.FC = () => {
                 validateTrigger={['onBlur']}
                 initialValues={{ prefix: '19' }}
             >
-            <div className="overlay"></div>
+                <div className="overlay"></div>
                 <div className="inner-container">
                     <h1 className="text-color1">Registro</h1>
                     <p>Eleve seu negócio para a era digital!</p>
                     <BackButton link={routes.signin} text="Home" />
 
-                    <Form.Item name="name" label="Nome" rules={formRules.required}>
+                    <Form.Item
+                        name="name"
+                        label="Nome"
+                        rules={formRules.required}
+                    >
                         <Input />
                     </Form.Item>
 
-                    <Form.Item name="email" label="E-mail" rules={formRules.email}>
+                    <Form.Item
+                        name="email"
+                        label="E-mail"
+                        rules={formRules.email}
+                    >
                         <Input />
                     </Form.Item>
 
-                    <Form.Item name="password" label="Senha" rules={formRules.password} hasFeedback>
+                    <Form.Item
+                        name="password"
+                        label="Senha"
+                        rules={formRules.password}
+                        hasFeedback
+                    >
                         <Input.Password />
                     </Form.Item>
 
@@ -47,15 +61,26 @@ const FormRegister: React.FC = () => {
                         label="Confirme a senha"
                         dependencies={['password']}
                         hasFeedback
-                        rules={[{ required: true, message: 'Por favor confirme sua senha', },
+                        rules={[
+                            {
+                                required: true,
+                                message: 'Por favor confirme sua senha'
+                            },
                             ({ getFieldValue }) => ({
                                 validator(_, value) {
-                                if (!value || getFieldValue('password') === value) {
-                                    return Promise.resolve()
+                                    if (
+                                        !value ||
+                                        getFieldValue('password') === value
+                                    ) {
+                                        return Promise.resolve()
+                                    }
+                                    return Promise.reject(
+                                        new Error(
+                                            'A confirmação da senha deve ser exatamente igual ao campo de senha'
+                                        )
+                                    )
                                 }
-                                return Promise.reject(new Error('A confirmação da senha deve ser exatamente igual ao campo de senha'))
-                                },
-                            }),
+                            })
                         ]}
                     >
                         <Input.Password />
@@ -76,7 +101,9 @@ const FormRegister: React.FC = () => {
                             <span className="">Já possui uma conta? </span>
 
                             <Link href={routes.signin}>
-                                <a className="text-color1 font-bold">Entre agora</a>
+                                <a className="text-color1 font-bold">
+                                    Entre agora
+                                </a>
                             </Link>
                         </div>
                     </Form.Item>

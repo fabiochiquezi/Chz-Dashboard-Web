@@ -3,15 +3,17 @@ import { useRouter } from 'next/router'
 import React, { useContext } from 'react'
 import { link, span, Div } from './styles'
 import { StructureContext } from '../StructureContext'
-import HomeIcon from '../../components/Icons/HomeIcon'
-import ChartIcon from '../../components/Icons/ChartIcon'
-import ConfigIcon from '../../components/Icons/ConfigIcon'
-import MenuExpand from '../../components/Icons/MenuExpand'
-import CalendarIcon from '../../components/Icons/CalendarIcon'
+
 import { routes } from '../../../shared/config/routes'
+import HomeIcon from '../../Components/Icons/HomeIcon'
+import ChartIcon from '../../Components/Icons/ChartIcon'
+import CalendarIcon from '../../Components/Icons/CalendarIcon'
+import ConfigIcon from '../../Components/Icons/ConfigIcon'
+import MenuExpand from '../../Components/Icons/MenuExpand'
 
 const Sidebar: React.FC = () => {
-    const { menuProvider, modeUI, menuDesktopProvider } = useContext(StructureContext)
+    const { menuProvider, modeUI, menuDesktopProvider } =
+        useContext(StructureContext)
     const { home } = routes
     const router = useRouter()
     const pathName = router.pathname
@@ -29,7 +31,12 @@ const Sidebar: React.FC = () => {
         >
             <Link href={home}>
                 <a className={link}>
-                    <span className={'app-sidebar-link ' + (pathName === home ? ' active' : '') }>
+                    <span
+                        className={
+                            'app-sidebar-link ' +
+                            (pathName === home ? ' active' : '')
+                        }
+                    >
                         <HomeIcon />
                     </span>
                     <span className={span}>Home</span>
@@ -38,7 +45,12 @@ const Sidebar: React.FC = () => {
 
             <Link href="/relatorios">
                 <a className={link}>
-                    <span className={'app-sidebar-link ' + (pathName === '/relatorios' ? ' active' : '') }>
+                    <span
+                        className={
+                            'app-sidebar-link ' +
+                            (pathName === '/relatorios' ? ' active' : '')
+                        }
+                    >
                         <ChartIcon />
                     </span>
                     <span className={span}>Relatórios</span>
@@ -47,7 +59,12 @@ const Sidebar: React.FC = () => {
 
             <Link href="/calendario">
                 <a className={link}>
-                    <span className={'app-sidebar-link ' + (pathName === '/calendario' ? ' active' : '') }>
+                    <span
+                        className={
+                            'app-sidebar-link ' +
+                            (pathName === '/calendario' ? ' active' : '')
+                        }
+                    >
                         <CalendarIcon />
                     </span>
                     <span className={span}>Calendário</span>
@@ -56,7 +73,12 @@ const Sidebar: React.FC = () => {
 
             <Link href="/configuracoes">
                 <a className={link}>
-                    <span className={'app-sidebar-link ' + (pathName === '/configuracoes' ? ' active' : '') }>
+                    <span
+                        className={
+                            'app-sidebar-link ' +
+                            (pathName === '/configuracoes' ? ' active' : '')
+                        }
+                    >
                         <ConfigIcon />
                     </span>
                     <span className={span}>Configurações</span>
@@ -64,8 +86,13 @@ const Sidebar: React.FC = () => {
             </Link>
 
             <div onClick={handleMenuDesktop}>
-                <div className="icon-show-menu-desktop" >
-                    <span className={'app-sidebar-link ' + (menuDesktopProvider.menuDesktop ? ' active' : '') }>
+                <div className="icon-show-menu-desktop">
+                    <span
+                        className={
+                            'app-sidebar-link ' +
+                            (menuDesktopProvider.menuDesktop ? ' active' : '')
+                        }
+                    >
                         <MenuExpand />
                     </span>
                 </div>

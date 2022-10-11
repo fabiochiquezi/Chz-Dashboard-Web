@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "rm -r -f out && next build && next export",
+    "build": "rm -r -f out && next build",
     "start": "next start",
     "test:unit": "jest --runInBand --watch",
     "test:e2e": "nightwatch",

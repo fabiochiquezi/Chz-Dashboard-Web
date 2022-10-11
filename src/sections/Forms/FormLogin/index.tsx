@@ -6,12 +6,13 @@ import { failedForm } from '../../../fns/utils/failedForm'
 import { formRules } from '../../../../shared/config/formRules'
 import React, { useRef, useState, useEffect } from 'react'
 import { UserOutlined, LockOutlined } from '@ant-design/icons'
-import MainButton from '../../../components/Buttons/MainButton'
-import LoadingSpin from '../../../components/Icons/LoadingSpin'
-import GoogleButton from '../../../components/Buttons/GoogleButton'
+
 import { fnSignin, fnSigninGoogle } from '../../../fns/Login/fnSignin'
 import { getRememberEmail } from '../../../fns/Login/fnRememberEmail'
 import { routes } from '../../../../shared/config/routes'
+import MainButton from '../../../Components/Buttons/MainButton'
+import LoadingSpin from '../../../Components/Icons/LoadingSpin'
+import GoogleButton from '../../../Components/Buttons/GoogleButton'
 
 const FormLogin: React.FC = () => {
     const [form] = Form.useForm()
@@ -37,7 +38,11 @@ const FormLogin: React.FC = () => {
                 <h1 className="text-color1">Chiquezi</h1>
                 <p>Eleve seu negócio para a era digital!</p>
 
-                <Form.Item name="email" rules={formRules.email} className="form-item-email">
+                <Form.Item
+                    name="email"
+                    rules={formRules.email}
+                    className="form-item-email"
+                >
                     <Input
                         prefix={<UserOutlined />}
                         placeholder="E-mail"
@@ -45,7 +50,11 @@ const FormLogin: React.FC = () => {
                     />
                 </Form.Item>
 
-                <Form.Item name="password" rules={formRules.password} className="form-item-pass">
+                <Form.Item
+                    name="password"
+                    rules={formRules.password}
+                    className="form-item-pass"
+                >
                     <Input
                         prefix={<LockOutlined />}
                         type="password"
@@ -55,7 +64,12 @@ const FormLogin: React.FC = () => {
                 </Form.Item>
 
                 <Form.Item className="box-options-form">
-                    <Form.Item name="remember" valuePropName="checked" noStyle className="form-item-remember">
+                    <Form.Item
+                        name="remember"
+                        valuePropName="checked"
+                        noStyle
+                        className="form-item-remember"
+                    >
                         <Checkbox>Lembrar-me</Checkbox>
                     </Form.Item>
 
@@ -63,7 +77,10 @@ const FormLogin: React.FC = () => {
                 </Form.Item>
 
                 <Form.Item className="end-form-options">
-                    <MainButton item={buttonSubmit} className="mb-2 mt-2 btn-send">
+                    <MainButton
+                        item={buttonSubmit}
+                        className="mb-2 mt-2 btn-send"
+                    >
                         {loading ? <LoadingSpin /> : 'Entrar'}
                     </MainButton>
 
@@ -73,7 +90,9 @@ const FormLogin: React.FC = () => {
                         <span className="">ou </span>
 
                         <Link href={routes.register}>
-                            <a className="text-color1 font-bold text-lg">cadastre-se</a>
+                            <a className="text-color1 font-bold text-lg">
+                                cadastre-se
+                            </a>
                         </Link>
                     </div>
                 </Form.Item>

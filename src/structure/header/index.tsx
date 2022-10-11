@@ -1,14 +1,15 @@
-import { Div } from './styles'
 import { useSelector } from 'react-redux'
 import { RootState } from '../../store/store'
-import Avatar1 from '../../components/Avatar/Avatar1'
-import MoonIcon from '../../components/Icons/MoonIcon'
-import MenuIcon from '../../components/Icons/MenuIcon'
+
 import { StructureContext } from '../StructureContext'
 import { routes } from '../../../shared/config/routes'
 import { getDevice } from '../../../shared/helpers/device'
 import React, { useEffect, useState, useContext } from 'react'
-import NotificationIcon from '../../components/Notification/NotificationIcon'
+import { Div } from './styles'
+import MenuIcon from '../../Components/Icons/MenuIcon'
+import Avatar1 from '../../Components/Avatar/Avatar1'
+import MoonIcon from '../../Components/Icons/MoonIcon'
+import NotificationIcon from '../../Components/Notification/NotificationIcon'
 
 const Header: React.FC = () => {
     const [device, setDevice] = useState('')
@@ -34,10 +35,9 @@ const Header: React.FC = () => {
                     handleClick={handleMenu}
                     device={device}
                     menu={
-                        device === 'mobile' ||
-                        device === 'tablet'
-                        ? menuProvider.menu
-                        : false
+                        device === 'mobile' || device === 'tablet'
+                            ? menuProvider.menu
+                            : false
                     }
                 />
             </div>
@@ -62,7 +62,6 @@ const Header: React.FC = () => {
                     <NotificationIcon />
                 </div>
             </div>
-
         </Div>
     )
 }

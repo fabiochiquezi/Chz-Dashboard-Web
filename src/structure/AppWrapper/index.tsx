@@ -1,35 +1,38 @@
 import React from 'react'
-import Header from '../Header'
 import Sidebar from '../Sidebar'
 import styled from 'styled-components'
 import { StructureProvider } from '../StructureContext'
+import Header from '../header'
 
 const Div = styled.div`
-    .app-container{
+    .app-container {
         width: 100%;
         display: flex;
         flex-direction: column;
         height: 100%;
         background-color: var(--app-container);
-        transition: .2s;
+        transition: 0.2s;
         max-width: 1800px;
 
-        button, input, optgroup, select, textarea {
+        button,
+        input,
+        optgroup,
+        select,
+        textarea {
             font-family: 'DM Sans', sans-serif;
         }
     }
 
-    .app-content{
+    .app-content {
         display: flex;
         flex-direction: column;
         padding: 16px 24px 24px 0;
 
-
-        @media (max-width: 520px){
+        @media (max-width: 520px) {
             padding: 16px 12px 24px 12px;
         }
 
-        @media (min-width: 1024px){
+        @media (min-width: 1024px) {
             flex-direction: row;
         }
     }
