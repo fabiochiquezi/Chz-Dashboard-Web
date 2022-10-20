@@ -1,15 +1,6 @@
-# Dashboard Next + Firebase + Ant design
+# README in production
 
-General Dashboard in process of construction
-&nbsp;
+This is a general Dashboard built in React/Firebase.
+An old project that I picked up again to finish it. However, the README is under construction.
 
-## Preview
-
-www.dashboard.chiquezi.com
-&nbsp;
-
-## Install
-
-1. clone repo
-2. install project (yarn install)
-3. run project: (yarn dev)
+_If you want to take a look at it working, here is the link:_ <a href="https://dashboard.chiquezi.com/signin">dashboard.chiquezi.com</a>
